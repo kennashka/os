@@ -1,6 +1,7 @@
 // code using the POSIX Pthreads API:
 
 
+
 #include <pthread.h>
 
 #include <stdlib.h>
@@ -21,7 +22,7 @@ void *thread_function(void *arg) {
 
       j=j+1;
 
-      printf(“.”);
+      printf(".");
 
       fflush(stdout);
 
@@ -43,7 +44,7 @@ int main(void) {
 
   if ( pthread_create( &mythread, NULL, thread_function,     NULL) ) {
 
-    printf(ldquo;error creating thread.”);
+    printf("ldquo;error creating thread.");
 
     abort();
 
@@ -53,7 +54,7 @@ for ( i=0; i<20; i++) {
 
   myglobal=myglobal+1;
 
-  printf(“o”);
+  printf("o");
 
   fflush(stdout);
 
@@ -63,13 +64,13 @@ for ( i=0; i<20; i++) {
 
 if ( pthread_join ( mythread, NULL ) ) {
 
-  printf(“error joining thread.”);
+  printf("error joining thread.");
 
 abort();
 
 }
 
-printf(“\nmyglobal equals %d\n”,myglobal);
+printf("\nmyglobal equals %d\n",myglobal);
 
 exit(0);
 
